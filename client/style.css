@@ -8,13 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top: 50px;
 }
 
 .container {
     justify-content: center; 
     align-items: center; 
     text-align: center;
-    max-width: 600px;
+
     width: 100%;
     background-color: #34495e;
     padding: 20px;
@@ -52,6 +53,8 @@ h1 {
 }
 
 #game-board {
+    margin-right: 40%;
+    margin-left: 35%;
     display: grid;
     grid-template-columns: repeat(5, 70px); 
     grid-template-rows: repeat(5, 70px);
@@ -60,8 +63,27 @@ h1 {
     border-radius: 8px;
     background-color: #2c3e50; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    margin-left: 100px ;
-    margin-right: 90px;
+}
+
+@media (max-width: 1200px) {
+    #game-board {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 800px) {
+    #game-board {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    #game-board {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
 }
 
 .cell {
@@ -71,23 +93,23 @@ h1 {
     cursor: pointer;
     border-radius: 4px;
     font-size: 1.8em;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for interactions */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     background-color: #ecf0f1;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .cell:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
+    transform: translateY(-3px); 
     background-color: #bdc3c7;
 }
 
 .cell.playerA, .cell.playerB {
     color: #ecf0f1;
-    background: linear-gradient(to bottom right, #c0392b, #e74c3c); /* Gradient for player A */
+    background: linear-gradient(to bottom right, #c0392b, #e74c3c); 
 }
 
 .cell.playerB {
-    background: linear-gradient(to bottom right, #2980b9, #3498db); /* Gradient for player B */
+    background: linear-gradient(to bottom right, #2980b9, #3498db); 
 }
 .confetti {
     position: fixed;
@@ -151,19 +173,30 @@ h1 {
 }
 
 #chat-container {
-    margin-top: 20px;
+    width: 98%; 
+    height: 100%; 
+    margin: 0; 
     text-align: left;
+    background-color: #2c3e50; 
+    border: none; 
+    border-radius: 10; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px; 
 }
 
 #chat-container h3 {
+    font-size: 20px;
     margin-bottom: 10px;
     color: #f39c12;
 }
 
 #chat-list {
+    flex: 1; 
     list-style-type: none;
     padding: 0;
-    max-height: 100px;
+    max-height: 100%; 
     overflow-y: auto;
     border: 1px solid #34495e;
     border-radius: 4px;
@@ -173,13 +206,10 @@ h1 {
     margin-bottom: 10px;
 }
 
-#chat-list li {
-    margin-bottom: 5px;
-}
-
 .chat-input-group {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px; 
 }
 
 #chat-input {
@@ -205,6 +235,7 @@ h1 {
 #send-chat:hover {
     background-color: #2ecc71;
 }
+
 
 #game-over {
     margin-top: 20px;
