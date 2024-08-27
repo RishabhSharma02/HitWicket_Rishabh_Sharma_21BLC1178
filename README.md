@@ -14,6 +14,8 @@ Made by- Rishabh Kumar Sharma
 #### Winner Celebration
 <img width="1439" alt="Screenshot 2024-08-27 at 10 20 17" src="https://github.com/user-attachments/assets/a294152b-a519-4ff1-8231-73c87789e459">
 
+#### Logging
+<img width="455" alt="Screenshot 2024-08-27 at 10 31 45" src="https://github.com/user-attachments/assets/68124496-1d41-41f1-9e36-730a4efa4cc7">
 
 ### Prerequisites
 
